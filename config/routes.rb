@@ -1,5 +1,7 @@
 Funkyscrum::Application.routes.draw do
 
+  resources :sprints
+
   devise_for :users
 
   root :to => "Home#index"
