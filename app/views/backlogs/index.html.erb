@@ -1,0 +1,23 @@
+<h1>Listing backlogs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @backlogs.each do |backlog| %>
+  <tr>
+    <td><%= backlog.name %></td>
+    <td><%= link_to 'Show', backlog %></td>
+    <td><%= link_to 'Edit', edit_backlog_path(backlog) %></td>
+    <td><%= link_to 'Destroy', backlog, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Backlog', new_backlog_path %>

@@ -1,11 +1,13 @@
 Funkyscrum::Application.routes.draw do
 
+  resources :backlogs
+
   resources :sprints
 
   devise_for :users
 
   root :to => "Home#index"
-  match '/home' => "home#index"
+  match '/home' => "home#index" # probably going to remove this
   resources :stories
 
   # The priority is based upon order of creation:
