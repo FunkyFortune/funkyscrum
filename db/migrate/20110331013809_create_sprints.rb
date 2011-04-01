@@ -14,5 +14,7 @@ class CreateSprints < ActiveRecord::Migration
 
   def self.down
     drop_table :sprints
+
+    remove_column :stories, :story_id
   end
 end

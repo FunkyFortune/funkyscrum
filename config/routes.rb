@@ -4,14 +4,11 @@ Funkyscrum::Application.routes.draw do
 
   resources :sprints
 
-  devise_for :users
 
   root :to => "Home#index"
   match '/home' => "home#index" # probably going to remove this
   resources :stories
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
