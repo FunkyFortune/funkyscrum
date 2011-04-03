@@ -1,13 +1,17 @@
 Funkyscrum::Application.routes.draw do
+  root :to => "Home#index"
 
   resources :backlogs
-
   resources :sprints
-
-
-  root :to => "Home#index"
-  match '/home' => "home#index" # probably going to remove this
   resources :stories
+  resources :users
+  resources :sesisons
+
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+
+  match '/home' => "home#index" # probably going to remove this
 
 
   # Sample of regular route:

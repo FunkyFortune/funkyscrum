@@ -1,11 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-#one: {}
-# column: value
-#
-#two: {}
-#  column: value
+# password is "bob"
+pass_is_bob:
+  email: bob@bob.com
+  password_hash: $2a$10$Ex1XRCXsDmFK4u1EvxbDTe8q.OaXodgqn.nqFQ90Rm4/hG51TISAG
+  password_salt: $2a$10$Ex1XRCXsDmFK4u1EvxbDTe
+
+two:
+  email: MyString
+  password_hash: MyString
+  password_salt: MyString
