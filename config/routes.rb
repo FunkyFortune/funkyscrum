@@ -12,6 +12,7 @@ Funkyscrum::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
 
   match '/home' => "home#index" # probably going to remove this
+  match '/dashboard' => "dashboard#index"
 
 
   # Sample of regular route:

@@ -11,8 +11,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     assert session[:user_id]
     assert_response :redirect
-    assert_redirected_to root_url
-    
+    assert_redirected_to dashboard_url
   end
 
 end
