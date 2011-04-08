@@ -18,7 +18,7 @@ class UsersControllerTest < ActionController::TestCase
 
   test "create user fails" do
     assert_no_difference('User.count') do
-      post :create, :user => { :email => "fdsa@fdsa.com" }
+      post :create, :user => { :email => "fdsa@fdsa.com" } # will fail because no email
     end
 
     assert_response :success
