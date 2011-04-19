@@ -12,8 +12,7 @@ class UsersControllerTest < ActionController::TestCase
     end
     
     assert_response :redirect 
-    assert_redirected_to root_url
-    
+    assert_redirected_to dashboard_url
   end
 
   test "create user fails" do
